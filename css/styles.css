@@ -263,7 +263,7 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
-  position: fixed;
+  position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -272,7 +272,16 @@ ul {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.modal-close:hover {
+  background-color: var(--logo-color);
+}
+
 .modal-title {
   font-size: 20px;
   line-height: 23px;
@@ -280,9 +289,6 @@ ul {
   color: var(--secondary-text-color);
 }
 
-.form {
-  margin-top: 12px;
-}
 .form-field {
   position: relative;
   display: flex;
@@ -293,6 +299,15 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
 }
 .form-input {
   width: 100%;
